@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.1/css/all.css">
+</head>
+<body>
+    <marquee><h4>The world of Hangman game</h4></marquee>
+    <h1 id="welcome">Welcome</h1>    
+    <i id="changeColor" class="fas fa-eclipse-alt fa-spin fa-4x"></i>
+
+    <div id="catSection">
+        
+        <h1><img src="images/detective.png" class="detect" alt="Detective Image"> Choose a category <img src="images/detective.png" class="detect" alt="Detective Image"></h1>
+        <div id="categoryList">
+            <button id="heros" onclick="hero(1)">Superheroes</button>
+            <button id="fruits" onclick="fruit(2)">Fruits</button>
+            <button id="animals" onclick="animal(3)">Animals</button>
+            <button id="mrtStations" onclick="mrtStation(4)">MRT Station</button>
+        </div>
+    </div>
+
+    <!-- Container for final message -->
+
+    <!-- Notification -->
+    <div class = "hidden game">
+    <p>Discover the mystery <u><strong>WORD!</strong></u></p>
+        <!-- Hangman-->
+    <div id="container">   
+        <canvas id="hangman" width="180" height="250"></canvas>
+        <h3 id="cat"><span class="cat-span"></span></h3>
+    </div>
+        <div class="keyboard"></div>
+        <div class="words-input"></div>
+    <h3>Remaining Tries: <span class="tries-span">6</span></h3>
+        <div class = "menurestart">
+            <button class="menu-button">menu</button>
+            <button class="restart-button">restart</button>
+        </div>
+        <div class ="hidden notif">
+            <h2><span class="status-span"></span></h2>
+            <h3 class="win-notif"> You won/lost! </h3>
+            <h4>Correct Word: <span class="notif-span"></span></h4>
+            <button class="notif-button">Play Again</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

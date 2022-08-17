@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Baloo 2', cursive;
+}
+
+body{
+    background-color: #f8f8ff;
+    color: rgb(27, 27, 27);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    margin: 20px 0px 40px 0px;
+    text-align: center;
+}
+
+#changeColor {
+  position: absolute;
+  right: 20px;
+  top:20px;
+  cursor:pointer;
+}
+
+body.dark{
+  background: rgb(1, 6, 53);
+  color: #fff;
+}
+
+.detect{
+  width: 35px;
+}
+
+#game
+{
+    text-align: center;
+}
+
+#categoryList{
+    text-align: center;
+}
+
+#heros, #fruits, #animals, #mrtStations
+{
+  width:300px;
+  height:80px;
+  display: inline-block;
+  padding: 15px;  
+  font-size: x-large;
+  text-align:center;
+  background-color: rgb(181, 175, 175);
+  margin:10px;
+  border-radius:10px;
+  border: 5px solid black;
+  cursor:pointer;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-animation: catPop 0.8s 0.5s both;
+	animation: catPop 0.8s 0.5s both;
+  -webkit-transition : border 0.5s ease-out;
+  -moz-transition : border 0.5s ease-out;
+  -o-transition : border 0.5s ease-out;
+  transition : border 0.5s ease-out;
+}
+
+#heros
+{
+  background-image: url('images/hero.png');
+}
+
+#fruits
+{
+  background-image: url('images/fruits.png');
+}
+
+#animals
+{
+  background-image: url('images/animal.png');
+}
+
+#mrtStations
+{
+  background-image: url('images/station.png');
+}
+
+#heros:hover, #fruits:hover, #animals:hover, #mrtStations:hover{
+  background: linear-gradient(to right, red, gold);
+  border : 10px solid rgb(248, 204, 204); 
+}
+
+@-webkit-keyframes catPop {
+  0% {
+    -webkit-box-shadow: 0 0 #717070, 0 0 #717070, 0 0 #717070, 0 0 #717070, 0 0 #717070, 0 0 #717070, 0 0 #717070, 0 0 #717070;
+            box-shadow: 0 0 #717070, 0 0 #717070, 0 0 #717070, 0 0 #717070, 0 0 #717070, 0 0 #717070, 0 0 #717070, 0 0 #717070;
+    -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0);
+  }
+  100% {
+    -webkit-box-shadow: 1px -1px #717070, 2px -2px #717070, 3px -3px #717070, 4px -4px #717070, 5px -5px #717070, 6px -6px #717070, 7px -7px #717070, 8px -8px #717070;
+            box-shadow: 1px -1px #717070, 2px -2px #717070, 3px -3px #717070, 4px -4px #717070, 5px -5px #717070, 6px -6px #717070, 7px -7px #717070, 8px -8px #717070;
+    -webkit-transform: translateX(-8px) translateY(8px);
+            transform: translateX(-8px) translateY(8px);
+  }
+}
+
+#welcome{
+  font-size: 60px;
+  -webkit-animation: txtShadow 1.2s infinite both;
+  animation: txtShadow 1.2s infinite both;
+}
+
+@-webkit-keyframes txtShadow {
+  0% {
+    text-shadow: 0 0 0 rgba(225, 238, 171, 0);
+  }
+  100% {
+    text-shadow: 0 0 18px rgba(73, 25, 25, 0.765);
+  }
+}
+
+@keyframes txtShadow {
+  0% {
+    text-shadow: 0 0 0 rgba(8, 11, 5, 0);
+  }
+  100% {
+    text-shadow: 0 0 30px #ff96e1;
+  }
+}
+
+button{
+  background-color: aqua;
+  color: black;
+  border: solid 3px black;
+  border-radius: 15px;
+  cursor:pointer;
+  font-size:1.2em;
+  padding: 18px 10px;
+  width:180px;
+  margin: 10px;
+  outline: none;
+}
+
+button:hover{
+  background: rgb(112, 235, 235);
+  border : 6px solid rgb(0, 0, 0); 
+}
+
+.notif {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(250, 116, 158);
+  width: 20rem;
+  padding: 20px 10px;
+  border-radius: 4px;
+  box-shadow: 3px 3px 1px 1px black;
+}
+
+.menu-button, .restart-button, .notif-button{
+  -webkit-animation: catPop 0.8s 0.5s both;
+	animation: catPop 0.8s 0.5s both;
+  -webkit-transition : border 0.5s ease-out;
+  -moz-transition : border 0.5s ease-out;
+  -o-transition : border 0.5s ease-out;
+  transition : border 0.5s ease-out;
+}
+
+.hidden {
+  display: none;
+}
+
+.flashkeys {
+  width: 2rem;
+  height: 2rem;
+  background: #dfeb44;
+  border: none;
+  border-radius: 4px;
+  margin: 3px;
+  cursor: pointer;
+  position: relative;
+}
+
+.flashkeys:hover {
+  background-color: #d54a74;
+  border: none;
+}
+
+.flashkeys p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+
+.words-input {
+  display: inline-flex;
+}
+
+.word {
+  margin-right: 1.5rem; 
+}
+
+.disabled {
+  pointer-events: none;
+  background-color: darkgray;
+}
